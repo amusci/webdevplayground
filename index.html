@@ -12,11 +12,23 @@
 
 <body>
 
-    <a href="https://www.google.com">
 
-        <button style="background-color: greenyellow; color: coral; width: 100px; height: 100px;border-radius: 25px;">Google</button>
 
-    </a>
+    <button onclick ="doSomething()" style="background-color: greenyellow; color: coral; width: 100px; height: 100px;border-radius: 25px;">clickomode</button>
+
+    <p id = "test">Hello</p>
+
+    <script>
+
+        function doSomething(){
+
+            document.getElementById("test").innerHTML = "Goodbye World!";
+
+        }
+
+    </script>
+
+
 
 </body>
 
