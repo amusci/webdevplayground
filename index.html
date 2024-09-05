@@ -10,25 +10,48 @@
 
 </head>
 
-<body>
+<body style="background-color: burlywood;">
 
 
+    <form action="action_page.php" method = "POST">
+        <div>
+            
+            <label for = "fname"> first name</label>
+            <input type ="text" id ="fname" name ="fname" placeholder = "Spongbong" required>
 
-    <button onclick ="doSomething()" style="background-color: greenyellow; color: coral; width: 100px; height: 100px;border-radius: 25px;">clickomode</button>
+        </div>
 
-    <p id = "test">Hello</p>
+        <br>
 
-    <script>
+        <div>
 
-        function doSomething(){
+            <label for="lname"> last name</label>
+            <input type="text" id="lname" name="lname" placeholder="Bongbob" required>
 
-            document.getElementById("test").innerHTML = "Goodbye World!";
+        </div>
 
-        }
+        <br>
 
-    </script>
+        <div>
+
+            <label for="pass">password: </label>
+            <input type="password" id="pass" name="pass" maxlength="12" required>
 
 
+        <div>
+
+            <input type="reset">
+
+        </div>
+
+        <div>
+        
+            <input type="submit" value = "Submit your data.">
+        
+        </div>
+
+
+    </form>
 
 </body>
 
