@@ -3,25 +3,26 @@ import React, { useState, useEffect, useRef } from 'react';
 export default function Playground() {
 
     const [name, setName] = useState('');
-    const renderCount = useRef();
+    const inputRef = useRef();
 
-    useEffect(() => {
+    function focus() {
 
-        renderCount.current = renderCount.current + 1;
+        inputRef.current.focus();
 
-    })
+    }
 
 
     return (
 
         <>
-        <input value={name} onChange={e => setName(e.target.value)} />
-        <div>My name is {name}</div>
-
-        <div>I rendered {renderCount.current} times!</div>
         
+            <input ref={inputRef} value={name} onChange={e => setName(e.target.value)} />
+
+            <div>My name is {name}</div>
+            <button onClick={focus}>Focus</button>
         
         </>
+
     )
 
 }
