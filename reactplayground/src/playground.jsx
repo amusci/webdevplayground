@@ -1,13 +1,18 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 
 export default function Playground() {
 
-    const [name, setName] = useState('');
-    const inputRef = useRef();
+    const [value, setValue] = useState(4);
 
-    function focus() {
+    function decrement() {
 
-        inputRef.current.focus();
+        setValue(value - 1);
+
+    }
+
+    function increment() {
+
+        setValue(value + 1);
 
     }
 
@@ -16,11 +21,10 @@ export default function Playground() {
 
         <>
         
-            <input ref={inputRef} value={name} onChange={e => setName(e.target.value)} />
+            <button onClick={decrement}>-</button>
+            <h1>{value}</h1>
+            <button onClick={increment}>+</button>
 
-            <div>My name is {name}</div>
-            <button onClick={focus}>Focus</button>
-        
         </>
 
     )
